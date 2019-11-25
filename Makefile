@@ -306,8 +306,7 @@ docker-%: SHELL:=/bin/bash
 docker-%:
 	image=$* ;\
 	$(MKDIR) -p $(DIST_DIR)/$${image/:} ;\
-	$(DOCKER) build --network=host \
-                    --build-arg IMAGESPEC=$* \
+	$(DOCKER) build --build-arg IMAGESPEC=$* \
                     --build-arg USERSPEC=$(UID):$(GID) \
                     --build-arg WITH_LIBELF=$(WITH_LIBELF) \
                     --build-arg WITH_TIRPC=$(WITH_TIRPC) \

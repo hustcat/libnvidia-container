@@ -1,5 +1,5 @@
-ARG IMAGESPEC=centos:7
-FROM ${IMAGESPEC}
+#ARG IMAGESPEC=centos:7
+FROM centos:7
 ARG IMAGESPEC=centos:7
 
 SHELL ["/bin/bash", "-c"]
